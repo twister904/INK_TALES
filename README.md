@@ -49,6 +49,11 @@ Ink Tales is a book blog platform designed for book enthusiasts to explore, sear
 
 7. Access the application in your web browser at `http://localhost:3000`.
 
+Demo
+Watch the demo video to see Ink Tales in action:
+
+[text](https://www.linkedin.com/posts/saifimazhar8_bookblog-literaturelovers-webdevelopment-activity-7213648509189644288-4cuu?utm_source=share&utm_medium=member_desktop)
+
 ## Future Enhancements
 
 - **User Authentication**: Implement user authentication for better security and personalized experience.
