@@ -1,15 +1,10 @@
 import express from "express";
 import bodyParser from "body-parser";
 import pg from "pg";
+import { data_base } from "./conf";
 const app=express();
 const port=3000;
-const db = new pg.Client({
-    user: "postgres",
-    host: "localhost",
-    database: "BookHub",
-    password: "mazhar@2472",
-    port: 5432
-});
+const db = new pg.Client(data_base);
 db.connect();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
