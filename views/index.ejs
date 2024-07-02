@@ -1,0 +1,30 @@
+<%- include('partials/header') %>
+<div class="hero row ">
+    <h2>Welcome to INK TALES</h2>
+</div>
+<div class="row row-cols-1 row-cols-md-3 g-4 ">
+    <% books_content.forEach(book => { %>
+    <div class="col bookslides" id="book-list">
+    <div class="   book-content"> <a href="/booknotes/<%= book.isbn_number %>" class="link-to-notes book_title "><img src="https://covers.openlibrary.org/b/isbn/<%= book.isbn_number %>-L.jpg"  alt="book_cover" class="home-book-cover card-img-top"></a>
+        <div class="home-book-info">
+            <a href="/booknotes/<%= book.isbn_number %>" class="link-to-notes book_title " style="text-decoration: none; color: inherit;"><h4 class="card-title home-book-title"><%= book.book_name %></h4></a>
+            <p><strong>Author:</strong><%= book.author %></p>
+            <p><strong>Published:</strong><%= new Date(book.date_published).toLocaleDateString() %></p>
+            <p><strong>ISBN:</strong><%= book.isbn_number %></p>
+            <p><strong>Ratings:</strong><%= book.rating %>/10</p>
+        </div>
+
+        <div class="home-book-about ">
+            <p>
+                <%= book.about %>
+            </p>
+        </div>
+    </div>
+    </div>
+    <% }); %>
+</div>
+</div>
+
+
+
+<%- include('partials/footer') %>

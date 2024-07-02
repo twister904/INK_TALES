@@ -1,0 +1,26 @@
+<%- include('partials/header') %>
+
+
+    <h2>Delete Book Data</h2>
+
+    <form action="/delete" method="POST">
+        <label for="isbn_number">ISBN Number:</label><br>
+        <input type="text" id="isbn_number" name="isbn_number" required><br><br>
+
+        <label for="name">Your Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Your Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">Your Password:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label for="security_question">Security Question:</label><br>
+        <input type="text" id="security_question" name="security_question" required><br><br>
+
+        <button type="submit">Delete Book</button>
+    </form>
+
+
+<%- include('partials/footer') %>

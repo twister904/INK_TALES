@@ -1,0 +1,32 @@
+<%- include('partials/header') %>
+    <h2>edit the book data</h2>
+
+    <form action="/edit" method="POST" >
+        <label for="isbn_number ">ISBN Number:</label><br>
+        <input type="text" id="isbn_number" name="isbn_number" required><br><br>
+        <label for="data-to-update">data-to-update</label><br>
+        <select name="data" id="data-to-update">
+            <option value="book_name">book name</option>
+            <option value="author">author</option>
+            <option value="about">about</option>
+            <option value="rating">rating</option>
+        </select>
+        <br>
+        <label for="data_to_update">enter the new data:</label><br>
+        <input type="text" id="ndata_to_update" name="data_to_update" required><br><br>
+
+        <label for="name">Your Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Your Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">Your Password:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label for="security_question">Security Question:</label><br>
+        <input type="text" id="security_question" name="security_question" required><br><br>
+
+        <button type="submit">Add Book Data</button>
+    </form>
+<%- include('partials/footer') %>

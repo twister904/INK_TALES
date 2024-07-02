@@ -1,0 +1,18 @@
+<%- include('partials/header') %>
+
+<div class="book-note" >
+    <% book_note.forEach(note => { %>
+        <a href="/booknotes/<%= note.isbn_number %>" class="book-link"><img src="https://covers.openlibrary.org/b/isbn/<%= note.isbn_number %>-M.jpg"  alt="Book Cover" class="book-cover" ></a>
+        <div class="book-info">
+        <h2 class="book-title"><%= note.book_name %></h2>
+        <p class="book-about"><strong>About:</strong><%= note.about %></p>
+        <p><strong>ISBN:</strong><%= note.isbn_number %></p>
+        <p><strong>Published:</strong><%= new Date(note.date_published).toLocaleDateString() %></p>
+        <p><strong>Author:</strong><%= note.author %></p>
+        <p><strong>Ratings:</strong><%= note.rating %>/10</p>
+        <p class="book-notes"><strong>Notes:</strong><%= note.book_notes %></p>
+    </div>
+    <% }); %>
+</div>
+
+<%- include('partials/footer') %>

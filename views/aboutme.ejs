@@ -1,0 +1,49 @@
+<%- include('partials/header') %>
+<div class="aboutme">
+    <div class="mydetail">
+        <div class="my-img ">
+            <img src="assets/images/bhbl.jpg" alt="profile_pic">
+        </div>
+        <div class="my-name ">
+            Mazhar Saifi
+        </div>
+        <div class="aboutme-info ">
+            <p>Hi! I'm Mazhar Saifi, a passionate reader and writer. This website is a platform where I share my thoughts and reviews on books that inspire me.
+            </p>
+        </div>
+        <div class="social-icon ">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fa-regular fa-envelope"></i></a>
+        </div>
+    </div>
+    <div class="website-reviews ">
+        <h2>----:Our Website reviews:----</h2>
+        <div class="comments ">
+            <% comments.forEach(comment => { %>
+                <div class="comment ">
+                    <h3 ><strong>name:-</strong><%= comment.name %></h3>
+                    <h3><strong>email:-</strong><%= comment.email %></h3>
+                    <p><strong>feedback:-</strong><%= comment.comment %></p>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+
+    <div class="add-comments-section">
+        <form action="/postcomment" method="POST" class="">
+            <h3>please leave your Feedback too</h3>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="comment">Comment:</label><br>
+            <textarea id="comment" name="comment" rows="4" required></textarea><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+<%- include('partials/footer') %>

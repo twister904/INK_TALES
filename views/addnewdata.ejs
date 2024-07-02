@@ -1,0 +1,43 @@
+<%- include('partials/header') %>
+
+
+    <h2 >Add New Book Data</h2>
+
+    <form action="/addnewdata" method="POST">
+        <label for="isbn_number">ISBN Number:</label><br>
+        <input type="text" id="isbn_number" name="isbn_number" required><br><br>
+
+        <label for="book_name">Book Name:</label><br>
+        <input type="text" id="book_name" name="book_name" required><br><br>
+
+        <label for="author">Author:</label><br>
+        <input type="text" id="author" name="author" required><br><br>
+
+        <label for="about">About:</label><br>
+        <textarea id="about" name="about" rows="4" required></textarea><br><br>
+
+        <label for="rating">Rating:</label><br>
+        <input type="number" id="rating" name="rating" min="1" max="10" required><br><br>
+
+        <label for="date_published">Date-published:</label><br>
+        <input type="date" id="rating" name="date_published" required><br><br>
+
+        <label for="book_notes">Book Notes:</label><br>
+        <textarea id="book_notes" name="book_notes" rows="4" required></textarea><br><br>
+
+        <label for="name">Your Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Your Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">Your Password:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label for="security_question">Security Question:</label><br>
+        <input type="text" id="security_question" name="security_question" required><br><br>
+
+        <button type="submit">Add Book Data</button>
+    </form>
+
+<%- include('partials/footer') %>

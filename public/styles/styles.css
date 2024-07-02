@@ -1,0 +1,510 @@
+/* Global styles */
+:root {
+    --light-color: #F8F4E1;
+    --light-color-alt: #AF8F6F;
+    --primary-background-color: #74512D;
+    --secondary-background-color: #AF8F6F;
+    --hover-light-color: #ffffff;
+    --hover-dark-color: #05e65f;
+    --gradient-color: linear-gradient(115deg, #AF8F6F, #373b44);
+    --transparent-light-color: rgba(255, 255, 255, 0.1);
+    --transparent-dark-color: rgba(0, 0, 0, 0.5);
+    --font-family: 'Roboto', sans-serif;
+    --font-size-xsm: 1.2rem;
+    --font-size-sm: 1.6rem;
+    --font-size-md: 2.4rem;
+    --font-size-lg: 3rem;
+    --font-size-xl: 4rem;
+    --gap: 2rem;
+    --margin-sm: 2rem;
+    --margin-md: 3rem;
+    --item-min-height-sm: 20rem;
+    --item-min-height-md: 30rem;
+}
+/* Body and general styling */
+body {
+    font-family: var(--font-family);
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--light-color);
+    color: #333;
+}
+
+/* Header styles */
+header {
+    background-color: var(--primary-background-color);
+    text-align: center;
+    color: var(--light-color);
+    padding: 2rem 0;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.home-page-title a {
+    text-decoration: none;
+    color: #fff;
+    font-size: var(--font-size-lg);
+}
+
+.about-website {
+    max-width: 80%;
+    padding: 1rem 2rem;
+    margin: 1rem auto;
+    text-align: center;
+    font-size: var(--font-size-sm);
+}
+
+.menu {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--gradient-color);
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+}
+
+/* Search bar styles */
+.search-bar {
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.search-bar input[type="text"] {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.search-bar button {
+    padding: 0.5rem 1rem;
+    margin: 10px;
+    background-color: var(--primary-background-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Main content styles */
+main {
+    padding: 2rem;
+}
+
+.hero {
+    background: var(--gradient-color);
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    padding: 3rem 0;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bookslides {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.book-content {
+    background-color: var(--light-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.book-content:hover {
+    transform: translateY(-10px);
+}
+
+.home-book-info {
+    margin-top: 1rem;
+    font-size: var(--font-size-sm);
+}
+
+.home-book-about {
+    margin-top: 1rem;
+    line-height: 1.6;
+}
+
+.home-book-title {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: var(--font-size-md);
+}
+
+.home-book-cover {
+    width: 100%; 
+    max-width: 250px;
+    height: 250px;
+    border-radius: 8px;
+}
+
+/* Footer styles */
+footer {
+    background-color: var(--primary-background-color);
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--hover-dark-color);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-website {
+        max-width: 100%;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .menu-button {
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .search-bar {
+        margin-top: 1rem;
+    }
+
+    .bookslides {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+/* Form and button styles */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 40%;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: var(--secondary-background-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-size: var(--font-size-xsm);
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="date"],
+form input[type="number"],
+form textarea,
+form select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: var(--font-size-xsm);
+}
+
+form button[type="submit"] {
+    padding: 0.5rem 1rem;
+    margin-top: 5px;
+    background-color: var(--primary-background-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: var(--font-size-xsm);
+    transition: background-color 0.3s;
+}
+
+form button[type="submit"]:hover {
+    background-color: var(--hover-dark-color);
+}
+
+/* Adjust form for smaller screens */
+@media screen and (max-width: 768px) {
+    form {
+        max-width: 80%;
+    }
+
+    form label,
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="password"],
+    form input[type="date"],
+    form input[type="number"],
+    form textarea,
+    form select,
+    form button[type="submit"] {
+        font-size: var(--font-size-xsm);
+    }
+}
+
+/* About Me styles */
+.aboutme .row {
+    margin: 0;
+    padding: 0;
+}
+
+/* Personal Details Section */
+.aboutme .mydetail {
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--secondary-background-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    max-width: 80%;
+}
+
+.aboutme .my-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    max-width: 150px;
+}
+
+.aboutme .my-name {
+    font-size: var(--font-size-lg);
+    font-weight: bold;
+    color: var(--light-color);
+    margin-top: 1rem;
+}
+
+.aboutme .aboutme-info {
+    font-size: var(--font-size-sm);
+    color: var(--light-color);
+    margin-top: 1rem;
+}
+
+.aboutme .social-icon a {
+    color: var(--primary-background-color);
+    font-size: 2rem;
+    margin: 0 0.5rem;
+    transition: color 0.3s;
+}
+
+.aboutme .social-icon a:hover {
+    color: var(--hover-light-color);
+}
+
+/* Website Reviews Section */
+.aboutme .website-reviews {
+    padding: 2rem;
+    background-color: var(--secondary-background-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    max-width: 80%;
+    text-align: center;
+}
+
+.aboutme .website-reviews h2 {
+    font-size: var(--font-size-md);
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.aboutme .comments {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.aboutme .comment {
+    background-color: var(--light-color);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 30%;
+    max-width: 30%;
+}
+
+.aboutme .comment h3 {
+    font-size: var(--font-size-xsm);
+    margin-bottom: 0.5rem;
+}
+
+.aboutme .comment p {
+    font-size: var(--font-size-xsm);
+}
+
+/* Add Comments Section */
+.aboutme .add-comments-section {
+    padding: 2rem;
+    background-color: var(--secondary-background-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    max-width: 80%;
+    text-align: center;
+}
+
+.aboutme .add-comments-section form {
+    background-color: var(--light-color);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.aboutme .add-comments-section h3 {
+    color: var(--primary-background-color);
+    font-size: var(--font-size-md);
+    margin-bottom: 1rem;
+}
+
+.aboutme .add-comments-section label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: var(--font-size-xsm);
+    font-weight: bold;
+}
+
+.aboutme .add-comments-section input[type="text"],
+.aboutme .add-comments-section input[type="email"],
+.aboutme .add-comments-section textarea {
+    width: 100%;
+    padding: 0.3rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: var(--font-size-xsm);
+}
+
+.aboutme .add-comments-section button {
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-background-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: var(--font-size-sm);
+    transition: background-color 0.3s;
+}
+
+.aboutme .add-comments-section button:hover {
+    background-color: var(--hover-dark-color);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .aboutme .mydetail,
+    .aboutme .website-reviews,
+    .aboutme .add-comments-section {
+        max-width: 95%;
+    }
+
+    .aboutme .my-img img {
+        max-width: 100px;
+    }
+
+    .aboutme .comment {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+   /* General styles */
+
+/* Header styles */
+
+/* Book note container */
+.book-note {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* Adjust column ratio as needed */
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.book-link {
+    display: block;
+    text-align: center;
+}
+
+.book-cover {
+    width: 100%; 
+    max-width: 250px; 
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.book-cover:hover {
+    transform: translateY(-5px);
+}
+
+.book-info {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.book-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.book-about {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.book-notes {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Footer styles */
+
