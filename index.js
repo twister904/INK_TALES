@@ -1,11 +1,9 @@
 import express from "express";
 import bodyParser from "body-parser";
-import pg from "pg";
-import { data_base } from "./conf";
+import db from './db.js';
 const app=express();
 const port=3000;
-const db = new pg.Client(data_base);
-db.connect();
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.set('view engine', 'ejs');
