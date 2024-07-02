@@ -67,6 +67,3 @@ Special thanks to Angela Yu from Udemy for her comprehensive web development cou
 ---
 
 Feel free to contribute to this project by submitting issues or pull requests. Your feedback and contributions are highly appreciated!
-```
-
-This README provides a comprehensive overview of the project, including features, tech stack, installation steps, future enhancements, and acknowledgments.
