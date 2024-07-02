@@ -52,7 +52,7 @@ Ink Tales is a book blog platform designed for book enthusiasts to explore, sear
 Demo
 Watch the demo video to see Ink Tales in action:
 
-[text](https://www.linkedin.com/posts/saifimazhar8_bookblog-literaturelovers-webdevelopment-activity-7213648509189644288-4cuu?utm_source=share&utm_medium=member_desktop)
+[▶️ ⬅️click here](https://www.linkedin.com/posts/saifimazhar8_bookblog-literaturelovers-webdevelopment-activity-7213648509189644288-4cuu?utm_source=share&utm_medium=member_desktop)
 
 ## Future Enhancements
 
